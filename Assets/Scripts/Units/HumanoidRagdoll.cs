@@ -24,18 +24,6 @@ public class HumanoidRagdoll : MonoBehaviour
 
     public void Kill() => _puppetMaster.Kill();
 
-    public void SetLegsPinWeight(float value)
-    {
-        _leftLegMuscle.props.pinWeight = value;
-        _rightLegMuscle.props.pinWeight = value;
-    }
-    
-    public void SetArmsPinWeight(float value)
-    {
-        _leftArmMuscle.props.pinWeight = value;
-        _rightArmMuscle.props.pinWeight = value;
-    }
-
     public void SetDeathRagdollSettings()
     {
         _puppetMaster.pinWeight = 1;

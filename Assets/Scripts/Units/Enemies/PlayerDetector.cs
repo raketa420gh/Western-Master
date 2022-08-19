@@ -22,24 +22,6 @@ public class PlayerDetector : MonoBehaviour
         _playerTransform = _player.PlayerCenterTransform;
     }
 
-    private void OnEnable() => _player.OnDeath += OnPlayerDeath;
-
-    private void OnDisable() => _player.OnDeath -= OnPlayerDeath;
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(_centerTransform.position, _viewRadius);
-
-        if (!_player) 
-            return;
-        
-        Gizmos.color = Color.red;
-        
-        if (Vector3.Distance(_centerTransform.position, GetPlayerTransform().position) < _viewRadius)
-            Gizmos.DrawLine(_centerTransform.position, GetPlayerTransform().position);
-    }
-
     public void Setup(float viewRadius) => _viewRadius = viewRadius;
 
     public bool IsSeePlayer()
@@ -52,8 +34,4 @@ public class PlayerDetector : MonoBehaviour
 
         return false;
     }
-
-    public Transform GetPlayerTransform() => _player.PlayerCenterTransform;
-
-    private void OnPlayerDeath() => Destroy(this);
 }
