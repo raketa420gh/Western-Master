@@ -15,7 +15,7 @@ public class Level : MonoBehaviour
     [Inject]
     public void Construct(SceneLoader sceneLoader) => _sceneLoader = sceneLoader;
 
-    private void Start() => StartLevel();
+    //private void Start() => StartLevel();
 
     private void StartLevel()
     {

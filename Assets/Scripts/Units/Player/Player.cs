@@ -6,16 +6,15 @@ public class Player : MonoBehaviour
 {
     public event Action OnDeath;
 
-    [BoxGroup("Data"), SerializeField] private PlayerData _data;
+    //[BoxGroup("Data"), SerializeField] private PlayerData _data;
     [BoxGroup("Components"), SerializeField] private HumanoidRagdoll _ragdoll;
-    [BoxGroup("Components"), SerializeField] private PlayerController _controller;
-    [BoxGroup("Components"), SerializeField] private PlayerMovement _movement;
+    //[BoxGroup("Components"), SerializeField] private PlayerController _controller;
+    //[BoxGroup("Components"), SerializeField] private PlayerMovement _movement;
     [BoxGroup("Components"), SerializeField] private EnemyDetector _enemyDetector;
     [BoxGroup("Parameters"), SerializeField] private Transform _playerCenterTransform;
     
     private Collider _collider;
-
-    public PlayerController Controller => _controller;
+    
     public EnemyDetector EnemyDetector => _enemyDetector;
     public Transform PlayerCenterTransform => _playerCenterTransform;
 
@@ -24,7 +23,7 @@ public class Player : MonoBehaviour
         _collider = GetComponent<BoxCollider>();
     }
 
-    private void Start() => Setup();
+    //private void Start() => Setup();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,8 +35,8 @@ public class Player : MonoBehaviour
 
     private void Setup()
     {
-        _controller.Setup(_data);
-        _movement.Setup(_data);
+        //_controller.Setup(_data);
+        //_movement.Setup(_data);
     }
 
     private void HandleDeath()
@@ -46,7 +45,7 @@ public class Player : MonoBehaviour
         _ragdoll.SetDeathRagdollSettings();
         
         _collider.enabled = false;
-        _controller.gameObject.SetActive(false);
+        //_controller.gameObject.SetActive(false);
         
         OnDeath?.Invoke();
         
