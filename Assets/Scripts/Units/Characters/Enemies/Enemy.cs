@@ -83,7 +83,6 @@ public class Enemy : MonoBehaviour
     private void HandleDeath()
     {
         _ragdoll.Kill();
-        _ragdoll.SetDeathRagdollSettings();
 
         _collider.enabled = false;
 

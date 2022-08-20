@@ -19,7 +19,7 @@ public class PlayerDetector : MonoBehaviour
     private void Awake()
     {
         _transform = transform;
-        _playerTransform = _player.PlayerCenterTransform;
+        _playerTransform = _player.CenterTransform;
     }
 
     public void Setup(float viewRadius) => _viewRadius = viewRadius;
