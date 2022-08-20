@@ -12,11 +12,11 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Environment
+  - Player
+  - Enemy
+  - Player Ragdoll
+  - Enemy Ragdoll
   - 
   - 
   - 
