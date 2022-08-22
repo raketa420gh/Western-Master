@@ -9,7 +9,7 @@ public class EnemyDetector : MonoBehaviour
 
     private Enemy _closestEnemy;
 
-    private readonly List<Enemy> _detectedEnemies = new List<Enemy>();
+    private readonly List<Character> _detectedEnemies = new List<Character>();
 
     public Transform GetClosestEnemyTransform() => GetClosestEnemy().CenterTransform;
 
@@ -41,5 +41,5 @@ public class EnemyDetector : MonoBehaviour
         return _closestEnemy;
     }
 
-    private void OnEnemyDeath(Enemy enemy) => _detectedEnemies.Remove(enemy);
+    private void OnEnemyDeath(Character enemy) => _detectedEnemies.Remove(enemy);
 }

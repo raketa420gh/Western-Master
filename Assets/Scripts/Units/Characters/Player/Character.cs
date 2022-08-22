@@ -2,29 +2,30 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterMovement))]
+[RequireComponent(typeof(HumanoidRagdoll))]
+
 public class Character : MonoBehaviour
 {
-    public event Action OnCreated;
-    public event Action OnDeath;
+    public event Action<Character> OnCreated;
+    public event Action<Character> OnDeath;
     
     [BoxGroup("Transform"), SerializeField] private Transform _centerTransform;
-    
-    private CharacterMovement _movement;
-    private HumanoidRagdoll _ragdoll;
+    [BoxGroup("Components"), SerializeField]private CharacterMovement _movement;
+    [BoxGroup("Components"), SerializeField]private HumanoidRagdoll _ragdoll;
     
     public Transform CenterTransform => _centerTransform;
 
-    private void Awake()
+    protected void Setup(CharacterData data)
     {
-        _movement = GetComponent<CharacterMovement>();
-        _ragdoll = GetComponent<HumanoidRagdoll>();
+        _movement.Setup(data);
     }
 
-    public void HandleDeath()
+    protected virtual void HandleDeath()
     {
         _ragdoll.Kill();
 
-        OnDeath?.Invoke();
+        OnDeath?.Invoke(this);
 
         enabled = false;
     }

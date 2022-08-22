@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Units/Player", fileName = "PlayerData", order = 51)]
+[CreateAssetMenu(menuName = "Data/Units/Player", fileName = "PlayerData", order = 51)]
 
-public class PlayerData : ScriptableObject
+public class PlayerData : CharacterData
 {
-    public float Speed;
+    
 }

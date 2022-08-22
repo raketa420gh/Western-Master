@@ -37,7 +37,7 @@ public class Level : MonoBehaviour
         OnFinished?.Invoke();
     }
 
-    private void OnEnemyDeath(Enemy enemy)
+    private void OnEnemyDeath(Character enemy)
     {
         _enemiesCount--;
 
