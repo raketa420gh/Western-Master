@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -39,9 +38,9 @@ public class AggroState : EnemyState
 
     private async UniTask WaitAggro(CancellationToken cancellationToken)
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(_enemy.AggroDuration), cancellationToken: cancellationToken);
+        //await UniTask.Delay(TimeSpan.FromSeconds(_enemy.AggroDuration), cancellationToken: cancellationToken);
 
-        _enemy.StateMachine.ChangeState(_playerDetector
-            .IsSeePlayer() ? _enemy.AttackState : _enemy.AggroState);
+        //_enemy.StateMachine.ChangeState(_playerDetector
+            //.IsSeePlayer() ? _enemy.AttackState : _enemy.AggroState);
     }
 }

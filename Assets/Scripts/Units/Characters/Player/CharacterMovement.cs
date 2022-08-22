@@ -8,12 +8,9 @@ public class CharacterMovement : MonoBehaviour, IMovement
     
     public float Speed { get; private set; }
 
-    private void Awake()
-    {
-        _controller = GetComponent<CharacterController>();
-    }
+    private void Awake() => _controller = GetComponent<CharacterController>();
 
     public void Move(Vector3 direction) => _controller.Move(direction);
 
-    public void Setup(float speed) => Speed = speed;
+    public void Setup(CharacterData data) => Speed = data.Speed;
 }
