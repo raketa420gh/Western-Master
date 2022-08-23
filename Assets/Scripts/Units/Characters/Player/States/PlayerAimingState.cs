@@ -1,16 +1,19 @@
-public class AimingState : CharacterState
+public class PlayerAimingState : PlayerState
 {
-    private Character _character;
+    private Player _player;
     private ICharacterAnimation _animation;
     
-    public AimingState(Character character) : base(character)
+    public PlayerAimingState(Player player, ICharacterAnimation animation) : base(player)
     {
-        _character = character;
+        _player = player;
+        _animation = animation;
     }
 
     public override void Enter()
     {
         base.Enter();
+        
+        _animation.PlayAim();
     }
 
     public override void Update()

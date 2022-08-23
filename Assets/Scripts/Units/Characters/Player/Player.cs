@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,7 +8,10 @@ public class Player : Character
 {
     [BoxGroup("Data"), SerializeField] private PlayerData _data;
 
-    private CharacterBehaviour _behaviour;
+    private StateMachine _stateMachine;
+    private PlayerIdleState _idleState;
+    private PlayerAimingState _aimingState;
+    
     private ICharacterAnimation _animation;
 
     private void Awake()
@@ -17,11 +21,33 @@ public class Player : Character
 
     private void Start() => Setup();
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+            SetIdleState();
+        
+        if (Input.GetKeyDown(KeyCode.A))
+            SetAimingState();
+    }
+
+    public void SetIdleState() => _stateMachine.ChangeState(_idleState);
+
+    public void SetAimingState() => _stateMachine.ChangeState(_aimingState);
+
     private void Setup()
     {
         base.Setup(_data);
         
-        _behaviour = new CharacterBehaviour(this);
-        _behaviour.InitializeStateMachine();
+        InitializeStateMachine();
+    }
+
+    private void InitializeStateMachine()
+    {
+        _stateMachine = new StateMachine();
+
+        _idleState = new PlayerIdleState(this, _animation);
+        _aimingState = new PlayerAimingState(this, _animation);
+        
+        SetIdleState();
     }
 }

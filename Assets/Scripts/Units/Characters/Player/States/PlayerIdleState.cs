@@ -1,16 +1,19 @@
-public class IdleState : CharacterState
+public class PlayerIdleState : PlayerState
 {
-    private Character _character;
+    private Player _player;
     private ICharacterAnimation _animation;
     
-    public IdleState(Character character) : base(character)
+    public PlayerIdleState(Player player, ICharacterAnimation animation) : base(player)
     {
-        _character = character;
+        _player = player;
+        _animation = animation;
     }
 
     public override void Enter()
     {
         base.Enter();
+        
+        _animation.PlayIdle();
     }
 
     public override void Update()
