@@ -2,20 +2,20 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class AggroState : EnemyState
+public class AggroState : CharacterState
 {
-    private Enemy _enemy;
+    private Enemy _character;
     private Rigidbody _rigidbody;
     private Animator _animator;
     private PlayerDetector _playerDetector;
     private CancellationTokenSource _waitAggroCTS;
 
-    public AggroState(Enemy enemy, 
+    public AggroState(Enemy character, 
         Rigidbody rigidbody,
         Animator animator, 
-        PlayerDetector playerDetector) : base(enemy)
+        PlayerDetector playerDetector) : base(character)
     {
-        _enemy = enemy;
+        _character = character;
         _rigidbody = rigidbody;
         _animator = animator;
         _playerDetector = playerDetector;

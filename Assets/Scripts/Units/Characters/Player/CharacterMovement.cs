@@ -12,5 +12,5 @@ public class CharacterMovement : MonoBehaviour, IMovement
 
     public void Move(Vector3 direction) => _controller.Move(direction);
 
-    public void Setup(CharacterData data) => Speed = data.Speed;
+    public void Setup(CharacterData data) => Speed = data.MoveSpeed;
 }

@@ -1,9 +1,9 @@
-public class IdleState : CharacterState
+public class AimingState : CharacterState
 {
     private Character _character;
     private ICharacterAnimation _animation;
     
-    public IdleState(Character character) : base(character)
+    public AimingState(Character character) : base(character)
     {
         _character = character;
     }

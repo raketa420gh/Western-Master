@@ -2,8 +2,10 @@ using UnityEngine;
 
 public abstract class CharacterData : ScriptableObject
 {
-    public float Speed = 0.5f;
-    public float AggroDuration = 1f;
-    public int MaxHealth = 1;
-    public float ViewRadius = 50f;
+    [SerializeField] private float _moveSpeed = 0.5f;
+    [SerializeField] private float _aggroDuration = 1f;
+    [SerializeField] private int _maxHealth = 1;
+    [SerializeField] private float _viewRadius = 50f;
+
+    public float MoveSpeed => _moveSpeed;
 }
