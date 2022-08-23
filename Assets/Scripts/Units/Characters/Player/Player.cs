@@ -1,4 +1,3 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,6 +6,7 @@ using UnityEngine;
 public class Player : Character
 {
     [BoxGroup("Data"), SerializeField] private PlayerData _data;
+    [BoxGroup("Weapon"), SerializeField] private PistolGun _gun;
 
     private StateMachine _stateMachine;
     private PlayerIdleState _idleState;
@@ -28,6 +28,13 @@ public class Player : Character
         
         if (Input.GetKeyDown(KeyCode.A))
             SetAimingState();
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            var enemy = FindObjectOfType<Enemy>();
+            var direction = enemy.CenterTransform.position - transform.position;
+            _gun.Shoot(direction);
+        }
     }
 
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
