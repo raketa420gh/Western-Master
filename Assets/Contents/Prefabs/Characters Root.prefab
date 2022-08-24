@@ -2495,7 +2495,7 @@ CharacterController:
   m_GameObject: {fileID: 4879780444246732430}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1.9
   m_Radius: 0.3
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bb4b10d6be62547b1f1aab5dcfbe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _centerTransform: {fileID: 5367748284416124229}
+  _centerTransform: {fileID: 4290504534561287102}
   _movement: {fileID: 554997279}
   _ragdoll: {fileID: 554997278}
   _data: {fileID: 11400000, guid: c68562c2cd7a4dc4f9d5afbe0cb91a73, type: 2}

@@ -2541,10 +2541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e59f468a61a49b88b35f4315b65ecf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _centerTransform: {fileID: 5367748284416124229}
+  _centerTransform: {fileID: 4290504534561287102}
   _movement: {fileID: 5804384633436145426}
   _ragdoll: {fileID: 1414769124264399375}
   _data: {fileID: 11400000, guid: 7167fc2c1468528479218b93bf83d606, type: 2}
+  _gun: {fileID: 1932993618}
 --- !u!114 &408018440766174180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5513,9 +5514,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4318296567840538209}
     m_Modifications:
+    - target: {fileID: 1048292740257584, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341075599876416, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717746114769032, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1908759806999368, guid: 95324ed677a95c641b3431168be7c352, type: 3}
       propertyPath: m_Name
       value: Revolver_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908759806999368, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4879888146567566, guid: 95324ed677a95c641b3431168be7c352, type: 3}
       propertyPath: m_RootOrder
@@ -5561,10 +5578,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -99.649
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 64860775137797984, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 1213213946b39114083bc78376da0569, type: 3}
+    m_RemovedComponents:
+    - {fileID: 64560954855894062, guid: 95324ed677a95c641b3431168be7c352, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 95324ed677a95c641b3431168be7c352, type: 3}
 --- !u!4 &1441376351212506675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4879888146567566, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+  m_PrefabInstance: {fileID: 1446106404274216893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1447716090274604277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1908759806999368, guid: 95324ed677a95c641b3431168be7c352, type: 3}
+  m_PrefabInstance: {fileID: 1446106404274216893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1932993618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447716090274604277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cefc9588ba4ffe81a7144b505e4fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 3791962145787697392, guid: 8877108bae698b649b3ffec7a064e839, type: 3}
+  _muzzle: {fileID: 8529271718465159828}
+--- !u!4 &8529271718465159828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7084045034223852841, guid: 95324ed677a95c641b3431168be7c352, type: 3}
   m_PrefabInstance: {fileID: 1446106404274216893}
   m_PrefabAsset: {fileID: 0}

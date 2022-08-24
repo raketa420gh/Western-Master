@@ -11,8 +11,9 @@ public class Player : Character
     private StateMachine _stateMachine;
     private PlayerIdleState _idleState;
     private PlayerAimingState _aimingState;
-    
     private ICharacterAnimation _animation;
+
+    public PistolGun Gun => _gun;
 
     private void Awake()
     {
@@ -23,18 +24,13 @@ public class Player : Character
 
     private void Update()
     {
+        _stateMachine.CurrentState.Update();
+        
         if (Input.GetKeyDown(KeyCode.I))
             SetIdleState();
         
         if (Input.GetKeyDown(KeyCode.A))
             SetAimingState();
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            var enemy = FindObjectOfType<Enemy>();
-            var direction = enemy.CenterTransform.position - transform.position;
-            _gun.Shoot(direction);
-        }
     }
 
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
@@ -55,6 +51,6 @@ public class Player : Character
         _idleState = new PlayerIdleState(this, _animation);
         _aimingState = new PlayerAimingState(this, _animation);
         
-        SetIdleState();
+        SetAimingState();
     }
 }

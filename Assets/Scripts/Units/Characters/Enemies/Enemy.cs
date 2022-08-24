@@ -19,6 +19,11 @@ public class Enemy : Character
 
     private void Start() => Setup();
 
+    public void Death()
+    {
+        HandleDeath();
+    }
+
     private void Setup()
     {
         base.Setup(_data);
