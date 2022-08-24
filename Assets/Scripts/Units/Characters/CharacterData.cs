@@ -8,4 +8,5 @@ public abstract class CharacterData : ScriptableObject
     [SerializeField] private float _viewRadius = 50f;
 
     public float MoveSpeed => _moveSpeed;
+    public int MaxHealth => _maxHealth;
 }

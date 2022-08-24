@@ -15,9 +15,21 @@ public class Player : Character
 
     public PistolGun Gun => _gun;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         _animation = GetComponent<ICharacterAnimation>();
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
     }
 
     private void Start() => Setup();

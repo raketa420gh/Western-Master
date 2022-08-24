@@ -2442,6 +2442,7 @@ GameObject:
   - component: {fileID: 1414769124264399375}
   - component: {fileID: 5360940019594668514}
   - component: {fileID: 408018440766174180}
+  - component: {fileID: 8228479851124177331}
   m_Layer: 8
   m_Name: Sheriff
   m_TagString: Untagged
@@ -2556,6 +2557,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ada494082d9488fbf5c262d9b501a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8228479851124177331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879780444246732430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188eaf340a1640d590aeba01defea4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4879780444251843130
@@ -5607,7 +5620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cefc9588ba4ffe81a7144b505e4fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 3791962145787697392, guid: 8877108bae698b649b3ffec7a064e839, type: 3}
+  playerBullet: {fileID: 3791962145787697392, guid: 8877108bae698b649b3ffec7a064e839, type: 3}
   _muzzle: {fileID: 8529271718465159828}
 --- !u!4 &8529271718465159828 stripped
 Transform:
