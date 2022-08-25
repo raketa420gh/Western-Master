@@ -12,9 +12,9 @@ public class Health : MonoBehaviour, IHealth
     public int Current { get; private set; }
     public bool IsImmortal { get; private set; }
 
-    public void Setup(int maxHealth)
+    public void Setup(CharacterData data)
     {
-        _max = maxHealth;
+        _max = data.MaxHealth;
         Restore();
     }
 

@@ -6,23 +6,37 @@ using UnityEngine;
 public class Enemy : Character
 {
     [BoxGroup("Data"), SerializeField] private EnemyData _data;
-    [BoxGroup("Detect Parameters"), SerializeField] private LayerMask _aimLayerMask;
-    
+
+    [BoxGroup("Detect Parameters"), SerializeField]
+    private LayerMask _aimLayerMask;
+
     private CharacterAppearanceChanger _appearanceChanger;
     private PlayerDetector _playerDetector;
 
-    private void Awake()
+    protected override void Awake()
     {
-        _playerDetector = GetComponent<PlayerDetector>();
+        base.Awake();
+        
         _appearanceChanger = GetComponent<CharacterAppearanceChanger>();
+        _playerDetector = GetComponent<PlayerDetector>();
     }
 
-    private void Start() => Setup();
-
-    private void Setup()
+    protected override void OnEnable()
     {
-        base.Setup(_data);
-        
+        base.OnEnable();
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
+    private void Start() => Setup(_data);
+
+    protected override void Setup(CharacterData data)
+    {
+        base.Setup(data);
+
         _appearanceChanger.SetRandomAppearance();
     }
 
