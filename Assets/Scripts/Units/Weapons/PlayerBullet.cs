@@ -8,8 +8,8 @@ public class PlayerBullet : ProjectileBase
 
         if (humanoidPart)
         {
-            humanoidPart.Health?.ChangeHealth(-1);
             humanoidPart.Rigidbody.AddForce(_direction * _impulseForce, ForceMode.Impulse);
+            humanoidPart.Health?.ChangeHealth(-1);
             
             base.OnTriggerEnter(collider);
         }

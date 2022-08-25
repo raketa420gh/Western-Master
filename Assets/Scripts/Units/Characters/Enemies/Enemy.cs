@@ -33,8 +33,6 @@ public class Enemy : Character
 
     private void Start() => Setup(_data);
 
-    public void Death() => HandleDeath();
-
     protected override void Setup(CharacterData data)
     {
         base.Setup(data);

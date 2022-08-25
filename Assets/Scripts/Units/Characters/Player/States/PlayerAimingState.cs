@@ -35,8 +35,11 @@ public class PlayerAimingState : PlayerState
 
         if (Input.GetMouseButtonDown(0))
         {
-            var direction = _aimingPoint - _player.Gun.Muzzle.position;
-            _player.Gun.Shoot(direction);
+            var aimingDirection = _aimingPoint - _player.Gun.Muzzle.position;
+            _player.Gun.Shoot(aimingDirection);
+            
+            _player.transform.LookAt(hitInfo.point);
+            _player.transform.Rotate(Vector3.up, 30);
         }
     }
 

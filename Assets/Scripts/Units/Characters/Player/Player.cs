@@ -45,15 +45,17 @@ public class Player : Character
             SetAimingState();
     }
 
-    public void SetIdleState() => _stateMachine.ChangeState(_idleState);
+    private void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    public void SetAimingState() => _stateMachine.ChangeState(_aimingState);
+    private void SetAimingState() => _stateMachine.ChangeState(_aimingState);
 
     private void Setup()
     {
         base.Setup(_data);
         
         InitializeStateMachine();
+        
+        _gun.Setup(5);
     }
 
     private void InitializeStateMachine()
