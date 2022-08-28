@@ -21,8 +21,11 @@ public class PistolGun : MonoBehaviour, IFirearms
     
     public void Shoot(Vector3 direction)
     {
-        if (_isMagazineEmpty) 
+        if (_isMagazineEmpty)
+        {
+            Debug.Log("Magazine is empty");
             return;
+        }
         
         var bullet = Instantiate(playerBullet, _muzzle.position, Quaternion.identity);
         bullet.SetDirection(direction);
