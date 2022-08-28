@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerRunningState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerRunningState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Characters.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/Characters.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationParameterNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationParameterNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/ICharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/ICharacterAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
       <workItem from="1661423921042" duration="145000" />
       <workItem from="1661424392259" duration="2786000" />
       <workItem from="1661618918717" duration="1191000" />
-      <workItem from="1661695256925" duration="1072000" />
+      <workItem from="1661695256925" duration="2162000" />
     </task>
     <servers />
   </component>

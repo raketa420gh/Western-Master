@@ -11,6 +11,7 @@ public class Player : Character
     private StateMachine _stateMachine;
     private PlayerIdleState _idleState;
     private PlayerAimingState _aimingState;
+    private PlayerRunningState _runningState;
     private ICharacterAnimation _animation;
 
     public PistolGun Gun => _gun;
@@ -49,13 +50,15 @@ public class Player : Character
 
     private void SetAimingState() => _stateMachine.ChangeState(_aimingState);
 
+    private void SetRunningState() => _stateMachine.ChangeState(_runningState);
+
     private void Setup()
     {
         base.Setup(_data);
         
         InitializeStateMachine();
         
-        _gun.Setup(5);
+        _gun.Setup(10);
     }
 
     private void InitializeStateMachine()
@@ -64,7 +67,8 @@ public class Player : Character
 
         _idleState = new PlayerIdleState(this, _animation);
         _aimingState = new PlayerAimingState(this, _animation);
+        _runningState = new PlayerRunningState(this, _animation);
         
-        SetAimingState();
+        SetIdleState();
     }
 }

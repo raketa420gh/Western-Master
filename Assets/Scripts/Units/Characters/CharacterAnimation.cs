@@ -11,4 +11,8 @@ public class CharacterAnimation : MonoBehaviour, ICharacterAnimation
     public void PlayIdle() => _animator.SetTrigger(AnimationParameterNames.Idle);
 
     public void PlayAim() => _animator.SetTrigger(AnimationParameterNames.Aim);
+    
+    public void PlayRun() => _animator.SetBool(AnimationParameterNames.Run, true);
+
+    public void StopRun() => _animator.SetBool(AnimationParameterNames.Run, false);
 }
