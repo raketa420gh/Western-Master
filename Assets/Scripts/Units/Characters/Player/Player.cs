@@ -1,3 +1,4 @@
+using Dreamteck.Splines;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -5,15 +6,18 @@ using UnityEngine;
 
 public class Player : Character
 {
+    [BoxGroup("Components"), SerializeField] private SplineFollower _splineFollower;
     [BoxGroup("Data"), SerializeField] private PlayerData _data;
     [BoxGroup("Weapon"), SerializeField] private PistolGun _gun;
 
     private StateMachine _stateMachine;
     private PlayerIdleState _idleState;
     private PlayerAimingState _aimingState;
+    private PlayerRunningState _runningState;
     private ICharacterAnimation _animation;
 
     public PistolGun Gun => _gun;
+    public SplineFollower SplineFollower => _splineFollower;
 
     protected override void Awake()
     {
@@ -32,30 +36,21 @@ public class Player : Character
         base.OnDisable();
     }
 
-    private void Start() => Setup();
+    private void Update() => _stateMachine.CurrentState.Update();
 
-    private void Update()
-    {
-        _stateMachine.CurrentState.Update();
-        
-        if (Input.GetKeyDown(KeyCode.I))
-            SetIdleState();
-        
-        if (Input.GetKeyDown(KeyCode.A))
-            SetAimingState();
-    }
+    public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    private void SetIdleState() => _stateMachine.ChangeState(_idleState);
+    public void SetAimingState() => _stateMachine.ChangeState(_aimingState);
 
-    private void SetAimingState() => _stateMachine.ChangeState(_aimingState);
+    public void SetRunningState() => _stateMachine.ChangeState(_runningState);
 
-    private void Setup()
+    public void Setup()
     {
         base.Setup(_data);
         
         InitializeStateMachine();
         
-        _gun.Setup(5);
+        _gun.Setup(10);
     }
 
     private void InitializeStateMachine()
@@ -64,7 +59,8 @@ public class Player : Character
 
         _idleState = new PlayerIdleState(this, _animation);
         _aimingState = new PlayerAimingState(this, _animation);
+        _runningState = new PlayerRunningState(this, _animation);
         
-        SetAimingState();
+        SetIdleState();
     }
 }

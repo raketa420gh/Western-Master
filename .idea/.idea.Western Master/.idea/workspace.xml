@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/Characters Root.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/PistolAiming.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/PistolAiming.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Slow Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/Slow Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/RandomEnemy Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/RandomEnemy Root.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PlayerBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PlayerBullet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +103,12 @@
       <workItem from="1661348920373" duration="8416000" />
       <workItem from="1661423921042" duration="145000" />
       <workItem from="1661424392259" duration="2786000" />
+      <workItem from="1661618918717" duration="1191000" />
+      <workItem from="1661695256925" duration="5636000" />
+      <workItem from="1661766458889" duration="7098000" />
+      <workItem from="1661783358321" duration="1237000" />
+      <workItem from="1661785585332" duration="183000" />
+      <workItem from="1661785829241" duration="202000" />
     </task>
     <servers />
   </component>
