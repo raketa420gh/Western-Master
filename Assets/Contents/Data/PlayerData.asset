@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2680042ffe3c462e8edce1bfc7230ac3, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  Speed: 10
+  _moveSpeed: 0
+  _aggroDuration: 1
+  _maxHealth: 1
+  _viewRadius: 50

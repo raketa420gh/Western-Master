@@ -1,3 +1,4 @@
+using Dreamteck.Splines;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class Player : Character
 {
+    [BoxGroup("Components"), SerializeField] private SplineFollower _splineFollower;
     [BoxGroup("Data"), SerializeField] private PlayerData _data;
     [BoxGroup("Weapon"), SerializeField] private PistolGun _gun;
 
@@ -15,6 +17,7 @@ public class Player : Character
     private ICharacterAnimation _animation;
 
     public PistolGun Gun => _gun;
+    public SplineFollower SplineFollower => _splineFollower;
 
     protected override void Awake()
     {
@@ -35,22 +38,13 @@ public class Player : Character
 
     private void Start() => Setup();
 
-    private void Update()
-    {
-        _stateMachine.CurrentState.Update();
-        
-        if (Input.GetKeyDown(KeyCode.I))
-            SetIdleState();
-        
-        if (Input.GetKeyDown(KeyCode.A))
-            SetAimingState();
-    }
+    private void Update() => _stateMachine.CurrentState.Update();
 
-    private void SetIdleState() => _stateMachine.ChangeState(_idleState);
+    public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    private void SetAimingState() => _stateMachine.ChangeState(_aimingState);
+    public void SetAimingState() => _stateMachine.ChangeState(_aimingState);
 
-    private void SetRunningState() => _stateMachine.ChangeState(_runningState);
+    public void SetRunningState() => _stateMachine.ChangeState(_runningState);
 
     private void Setup()
     {
