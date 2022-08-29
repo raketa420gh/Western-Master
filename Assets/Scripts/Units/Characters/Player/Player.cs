@@ -36,8 +36,6 @@ public class Player : Character
         base.OnDisable();
     }
 
-    private void Start() => Setup();
-
     private void Update() => _stateMachine.CurrentState.Update();
 
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
@@ -46,7 +44,7 @@ public class Player : Character
 
     public void SetRunningState() => _stateMachine.ChangeState(_runningState);
 
-    private void Setup()
+    public void Setup()
     {
         base.Setup(_data);
         

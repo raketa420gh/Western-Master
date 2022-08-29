@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        _player.Setup();
+        
         _player.SplineFollower.followSpeed = 2f;
         _player.SetRunningState();
     }
