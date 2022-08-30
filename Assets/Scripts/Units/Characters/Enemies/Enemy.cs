@@ -12,6 +12,10 @@ public class Enemy : Character
 
     private CharacterAppearanceChanger _appearanceChanger;
     private PlayerDetector _playerDetector;
+    
+    private StateMachine _stateMachine;
+    private EnemyIdleState _idleState;
+    private EnemyAggroState _aggroState;
 
     protected override void Awake()
     {
@@ -24,14 +28,18 @@ public class Enemy : Character
     protected override void OnEnable()
     {
         base.OnEnable();
+        
+        Setup(_data);
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
     }
+    
+    public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    private void Start() => Setup(_data);
+    public void SetAimingState() => _stateMachine.ChangeState(_aggroState);
 
     protected override void Setup(CharacterData data)
     {
@@ -43,5 +51,15 @@ public class Enemy : Character
     protected override void HandleDeath()
     {
         base.HandleDeath();
+    }
+    
+    private void InitializeStateMachine()
+    {
+        _stateMachine = new StateMachine();
+
+        _idleState = new EnemyIdleState(this, _animation);
+        _aggroState = new EnemyAggroState(this, _animation);
+        
+        SetIdleState();
     }
 }
