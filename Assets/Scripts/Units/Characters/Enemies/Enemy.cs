@@ -6,13 +6,10 @@ using UnityEngine;
 public class Enemy : Character
 {
     [BoxGroup("Data"), SerializeField] private EnemyData _data;
-
-    [BoxGroup("Detect Parameters"), SerializeField]
-    private LayerMask _aimLayerMask;
+    [BoxGroup("Detect Parameters"), SerializeField] private LayerMask _aimLayerMask;
 
     private CharacterAppearanceChanger _appearanceChanger;
     private PlayerDetector _playerDetector;
-    
     private StateMachine _stateMachine;
     private EnemyIdleState _idleState;
     private EnemyAggroState _aggroState;
@@ -39,13 +36,14 @@ public class Enemy : Character
     
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    public void SetAimingState() => _stateMachine.ChangeState(_aggroState);
+    public void SetAggroState() => _stateMachine.ChangeState(_aggroState);
 
     protected override void Setup(CharacterData data)
     {
         base.Setup(data);
 
         _appearanceChanger.SetRandomAppearance();
+        //_playerDetector.Setup(100);
     }
 
     protected override void HandleDeath()
@@ -58,7 +56,7 @@ public class Enemy : Character
         _stateMachine = new StateMachine();
 
         _idleState = new EnemyIdleState(this, _animation);
-        _aggroState = new EnemyAggroState(this, _animation);
+        _aggroState = new EnemyAggroState(this, _animation, _data.AggroType);
         
         SetIdleState();
     }

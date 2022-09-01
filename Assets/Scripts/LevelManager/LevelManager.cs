@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour
     private void OnSpotVisited()
     {
         _player.SplineFollower.followSpeed = 0f;
-        _player.SetAimingState();
+        _player.SetAggroState();
     }
 
     private void OnSpotPassed()

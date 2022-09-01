@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class EnemyData : CharacterData
 {
-    
+    [SerializeField] private EnemyAggroType _aggroType = EnemyAggroType.Simply;
+
+    public EnemyAggroType AggroType => _aggroType;
 }

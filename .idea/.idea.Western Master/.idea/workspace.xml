@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyIdleState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyIdleState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/EnemyAggroType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/EnemyAggroType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAggroState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAimingState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAggroState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +110,8 @@
       <workItem from="1661785585332" duration="183000" />
       <workItem from="1661785829241" duration="202000" />
       <workItem from="1661786079164" duration="232000" />
-      <workItem from="1661869544252" duration="2002000" />
+      <workItem from="1661869544252" duration="2913000" />
+      <workItem from="1662035886908" duration="6673000" />
     </task>
     <servers />
   </component>

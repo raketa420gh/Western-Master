@@ -35,7 +35,7 @@ public class Player : Character
 
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
-    public void SetAimingState() => _stateMachine.ChangeState(_aggroState);
+    public void SetAggroState() => _stateMachine.ChangeState(_aggroState);
 
     public void SetRunningState() => _stateMachine.ChangeState(_runningState);
 
@@ -45,7 +45,7 @@ public class Player : Character
         
         InitializeStateMachine();
         
-        _gun.Setup(10);
+        _gun.Setup(100);
     }
 
     private void InitializeStateMachine()
