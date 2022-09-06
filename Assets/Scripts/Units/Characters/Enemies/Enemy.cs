@@ -8,6 +8,7 @@ public class Enemy : Character
 {
     [BoxGroup("Data"), SerializeField] private EnemyData _data;
     [BoxGroup("Detect Parameters"), SerializeField] private LayerMask _aimLayerMask;
+    [BoxGroup("Weapon"), SerializeField] private PistolGun _gun;
 
     private CharacterAppearanceChanger _appearanceChanger;
     private PlayerDetector _playerDetector;
@@ -16,6 +17,7 @@ public class Enemy : Character
     private EnemyAggroState _aggroState;
 
     public PlayerDetector PlayerDetector => _playerDetector;
+    public PistolGun Gun => _gun;
 
     protected override void Awake()
     {
@@ -29,9 +31,9 @@ public class Enemy : Character
     {
         base.OnEnable();
         
-        Setup(_data);
-        
         InitializeStateMachine();
+        Setup(_data);
+        _gun.Setup(100);
     }
 
     protected override void OnDisable()
@@ -42,6 +44,8 @@ public class Enemy : Character
     public void SetIdleState() => _stateMachine.ChangeState(_idleState);
 
     public void SetAggroState() => _stateMachine.ChangeState(_aggroState);
+
+    public void ShootForwardWithDelay(float delay) => Invoke(nameof(ShootForward), delay);
 
     protected override void Setup(CharacterData data)
     {
@@ -64,4 +68,8 @@ public class Enemy : Character
         
         SetIdleState();
     }
+
+    private void Shoot(Vector3 direction) => _gun.Shoot(direction);
+
+    private void ShootForward() => Shoot(Vector3.forward);
 }
