@@ -1,11 +1,11 @@
-public class PlayerIdleState : PlayerState
+public class EnemyIdleState : EnemyState
 {
-    private Player _player;
+    private Enemy _enemy;
     private ICharacterAnimation _animation;
     
-    public PlayerIdleState(Player player, ICharacterAnimation animation) : base(player)
+    public EnemyIdleState(Enemy enemy, ICharacterAnimation animation) : base(enemy)
     {
-        _player = player;
+        _enemy = enemy;
         _animation = animation;
     }
 

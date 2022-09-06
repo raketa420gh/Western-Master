@@ -1,14 +1,14 @@
 using System;
 using UnityEngine;
 
-public class PlayerAimingState : PlayerState
+public class PlayerAggroState : PlayerState
 {
     private Player _player;
     private ICharacterAnimation _animation;
     private Camera _camera = Camera.main;
     private Vector3 _aimingPoint;
 
-    public PlayerAimingState(Player player, ICharacterAnimation animation) : base(player)
+    public PlayerAggroState(Player player, ICharacterAnimation animation) : base(player)
     {
         _player = player;
         _animation = animation;
@@ -46,5 +46,7 @@ public class PlayerAimingState : PlayerState
     public override void Exit()
     {
         base.Exit();
+        
+        _animation.StopAim();
     }
 }

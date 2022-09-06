@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PistolGun : MonoBehaviour, IFirearms
 {
-    [SerializeField] private PlayerBullet playerBullet;
+    [SerializeField] private ProjectileBase _bullet;
     [SerializeField] private Transform _muzzle;
 
     public Transform Muzzle => _muzzle;
@@ -27,7 +27,7 @@ public class PistolGun : MonoBehaviour, IFirearms
             return;
         }
         
-        var bullet = Instantiate(playerBullet, _muzzle.position, Quaternion.identity);
+        var bullet = Instantiate(_bullet, _muzzle.position, Quaternion.identity);
         bullet.SetDirection(direction);
 
         _currentBullets--;
