@@ -9,8 +9,10 @@ public class CharacterAnimation : MonoBehaviour, ICharacterAnimation
     private void Awake() => _animator = GetComponent<Animator>();
 
     public void PlayIdle() => _animator.SetTrigger(AnimationParameterNames.Idle);
+    public void StopIdle() => _animator.SetBool(AnimationParameterNames.Idle, false);
 
     public void PlayAim() => _animator.SetTrigger(AnimationParameterNames.Aim);
+    public void StopAim() => _animator.SetBool(AnimationParameterNames.Aim, false);
     
     public void PlayRun() => _animator.SetBool(AnimationParameterNames.Run, true);
 

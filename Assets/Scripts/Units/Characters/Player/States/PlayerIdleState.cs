@@ -24,5 +24,7 @@ public class PlayerIdleState : PlayerState
     public override void Exit()
     {
         base.Exit();
+        
+        _animation.StopIdle();
     }
 }

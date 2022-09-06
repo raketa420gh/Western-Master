@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterAppearanceChanger))]
+[RequireComponent(typeof(PlayerDetector))]
 
 public class Enemy : Character
 {
@@ -13,6 +14,8 @@ public class Enemy : Character
     private StateMachine _stateMachine;
     private EnemyIdleState _idleState;
     private EnemyAggroState _aggroState;
+
+    public PlayerDetector PlayerDetector => _playerDetector;
 
     protected override void Awake()
     {
@@ -27,6 +30,8 @@ public class Enemy : Character
         base.OnEnable();
         
         Setup(_data);
+        
+        InitializeStateMachine();
     }
 
     protected override void OnDisable()
@@ -43,7 +48,6 @@ public class Enemy : Character
         base.Setup(data);
 
         _appearanceChanger.SetRandomAppearance();
-        //_playerDetector.Setup(100);
     }
 
     protected override void HandleDeath()

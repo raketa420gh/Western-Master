@@ -13,7 +13,7 @@ public abstract class Character : MonoBehaviour
     public event Action<Character> OnCreated;
     public event Action<Character> OnDeath;
     
-    [BoxGroup("Transform"), SerializeField] private Transform _centerTransform;
+    [BoxGroup("Transform"), SerializeField] protected Transform _centerTransform;
     [BoxGroup("Components"), SerializeField] private CharacterMovement _movement;
     [BoxGroup("Components"), SerializeField] private HumanoidRagdoll _ragdoll;
     

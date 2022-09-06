@@ -24,5 +24,7 @@ public class EnemyIdleState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        
+        _animation.StopIdle();
     }
 }

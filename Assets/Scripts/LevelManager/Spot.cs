@@ -33,8 +33,11 @@ public class Spot : MonoBehaviour
     public void Visit()
     {
         foreach (var enemy in _enemies)
+        {
             enemy.gameObject.SetActive(true);
-        
+            enemy.SetAggroState();
+        }
+
         OnVisited?.Invoke();
     }
 

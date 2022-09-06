@@ -5,15 +5,11 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<Spot> _spots = new List<Spot>();
     [SerializeField] private Player _player;
-    
-    private Spot _lastSpot;
 
     private void OnEnable()
     {
         if (_spots.Capacity > 0)
         {
-            _lastSpot = _spots[_spots.Capacity - 1];
-
             foreach (var spot in _spots)
                 spot.OnVisited += OnSpotVisited;
             

@@ -12,9 +12,10 @@ public class Player : Character
     private PlayerIdleState _idleState;
     private PlayerAggroState _aggroState;
     private PlayerRunningState _runningState;
-
+    
     public PistolGun Gun => _gun;
     public SplineFollower SplineFollower => _splineFollower;
+    public Vector3 GetPosition => _centerTransform.position;
 
     protected override void Awake()
     {

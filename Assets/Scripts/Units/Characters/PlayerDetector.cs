@@ -7,7 +7,7 @@ public class PlayerDetector : MonoBehaviour
     [BoxGroup("Parameters"), SerializeField] private LayerMask _playerLayerMask;
     [BoxGroup("Parameters"), SerializeField] private Transform _centerTransform;
 
-    private float _viewRadius;
+    private float _viewRadius = 250;
     private Player _player;
     private Transform _transform;
     private Transform _playerTransform;
@@ -34,4 +34,6 @@ public class PlayerDetector : MonoBehaviour
 
         return false;
     }
+
+    public Vector3 GetPlayerPosition() => _player.GetPosition;
 }

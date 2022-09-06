@@ -15,23 +15,25 @@ public class EnemyAggroState : EnemyState
     {
         base.Enter();
 
+        var playerPosition = _enemy.PlayerDetector.GetPlayerPosition();
+
         switch (_aggroType)
         {
             case EnemyAggroType.Simply:
             {
-                //Rotate
+                _enemy.transform.LookAt(playerPosition);
                 _animation.PlayAim();
+                //Delay
+                //Shoot
                 break;
             }
             case EnemyAggroType.WithMoving:
             {
                 //MoveTo
-                //Rotate
+                _enemy.transform.LookAt(playerPosition);
                 _animation.PlayAim();
-                break;
-            }
-            case EnemyAggroType.Trick:
-            {
+                //Delay
+                //Shoot
                 break;
             }
         }
@@ -45,5 +47,7 @@ public class EnemyAggroState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        
+        _animation.StopAim();
     }
 }
