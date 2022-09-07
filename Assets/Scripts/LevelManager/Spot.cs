@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Spot : MonoBehaviour
 {
-    public event Action OnVisited;
-    public event Action OnPassed;
+    public event Action<Spot> OnVisited;
+    public event Action<Spot> OnPassed;
 
     [SerializeField] private List<Enemy> _enemies = new List<Enemy>();
     private int _enemiesCount;
+    private int _number;
+    private bool _isLast;
+
+    public int Number => _number;
+    public bool IsLast => _isLast;
 
     private void OnEnable()
     {
@@ -30,6 +35,12 @@ public class Spot : MonoBehaviour
             enemy.OnDeath -= OnEnemyDeath;
     }
 
+    public void Initialize(int number, bool isLast)
+    {
+        _number = number;
+        _isLast = isLast;
+    }
+
     public void Visit()
     {
         foreach (var enemy in _enemies)
@@ -38,12 +49,12 @@ public class Spot : MonoBehaviour
             enemy.SetAggroState();
         }
 
-        OnVisited?.Invoke();
+        OnVisited?.Invoke(this);
     }
 
     private void Pass()
     {
-        OnPassed?.Invoke();
+        OnPassed?.Invoke(this);
     }
 
     private void OnEnemyDeath(Character character)

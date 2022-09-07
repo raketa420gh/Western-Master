@@ -9,4 +9,5 @@ public abstract class CharacterData : ScriptableObject
 
     public float MoveSpeed => _moveSpeed;
     public int MaxHealth => _maxHealth;
+    public float AggroDuration => _aggroDuration;
 }

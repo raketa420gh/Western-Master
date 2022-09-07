@@ -1,6 +1,3 @@
-
-using UnityEngine;
-
 public class EnemyAggroState : EnemyState
 {
     private Enemy _enemy;
@@ -26,7 +23,7 @@ public class EnemyAggroState : EnemyState
             {
                 _enemy.transform.LookAt(playerPosition);
                 _animation.PlayAim();
-                _enemy.ShootForwardWithDelay(1f);
+                _enemy.ShootForwardWithDelay(_enemy.AggroDuration);
                 break;
             }
             case EnemyAggroType.WithMoving:
@@ -34,7 +31,7 @@ public class EnemyAggroState : EnemyState
                 //MoveTo
                 _enemy.transform.LookAt(playerPosition);
                 _animation.PlayAim();
-                _enemy.ShootForwardWithDelay(1f);
+                _enemy.ShootForwardWithDelay(_enemy.AggroDuration);
                 break;
             }
         }

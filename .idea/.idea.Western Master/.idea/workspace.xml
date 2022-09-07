@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/EnemyBullet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/EnemyBullet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationCameraStateNames.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationCameraStateNames.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/CameraSwitcherInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/CameraSwitcherInstaller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Characters.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/Characters.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Characters@Slow Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Characters@Slow Run.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/RandomEnemy Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/RandomEnemy Root.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/States/EnemyAggroState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Weapons/PistolGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/PlayerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/PlayerDetector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/AnimationCameraStateNames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Characters/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Characters/HumanoidRagdoll.cs" root0="FORCE_HIGHLIGHTING" />
@@ -115,6 +124,7 @@
       <workItem from="1662470969978" duration="701000" />
       <workItem from="1662472350293" duration="1637000" />
       <workItem from="1662474723202" duration="6351000" />
+      <workItem from="1662561920146" duration="5249000" />
     </task>
     <servers />
   </component>
