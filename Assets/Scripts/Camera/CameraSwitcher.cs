@@ -9,4 +9,6 @@ public class CameraSwitcher : MonoBehaviour
     public void SetPlayerFollowCamera() => _animator.Play(AnimationCameraStateNames.PlayerFollow);
 
     public void SetSpotCamera(int spotNumber) => _animator.Play(AnimationCameraStateNames.Spot + $"{spotNumber}");
+
+    public void SetFinishCamera() => _animator.Play(AnimationCameraStateNames.Finish);
 }

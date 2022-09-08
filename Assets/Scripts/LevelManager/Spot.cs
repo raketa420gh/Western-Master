@@ -15,27 +15,11 @@ public class Spot : MonoBehaviour
     public int Number => _number;
     public bool IsLast => _isLast;
 
-    private void OnEnable()
-    {
-        if (_enemies.Capacity > 0)
-        {
-            foreach (var enemy in _enemies)
-            {
-                enemy.OnDeath += OnEnemyDeath;
-                _enemiesCount++;
-            }
-        }
-        else
-            Debug.LogError("Enemies list is empty!");
-    }
+    private void OnEnable() => Initialize();
 
-    private void OnDisable()
-    {
-        foreach (var enemy in _enemies)
-            enemy.OnDeath -= OnEnemyDeath;
-    }
+    private void OnDisable() => Disable();
 
-    public void Initialize(int number, bool isLast)
+    public void Setup(int number, bool isLast)
     {
         _number = number;
         _isLast = isLast;
@@ -50,6 +34,26 @@ public class Spot : MonoBehaviour
         }
 
         OnVisited?.Invoke(this);
+    }
+
+    private void Initialize()
+    {
+        if (_enemies.Capacity > 0)
+        {
+            foreach (var enemy in _enemies)
+            {
+                enemy.OnDeath += OnEnemyDeath;
+                _enemiesCount++;
+            }
+        }
+        else
+            Debug.Log("Enemies list is empty!");
+    }
+
+    private void Disable()
+    {
+        foreach (var enemy in _enemies)
+            enemy.OnDeath -= OnEnemyDeath;
     }
 
     private void Pass()
