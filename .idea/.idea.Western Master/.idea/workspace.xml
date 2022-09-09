@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Animations/Camera/CinemachineCamera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Animations/Camera/CinemachineCamera.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,8 @@
       <workItem from="1662474723202" duration="6351000" />
       <workItem from="1662561920146" duration="5906000" />
       <workItem from="1662641379594" duration="1599000" />
-      <workItem from="1662647031064" duration="3198000" />
+      <workItem from="1662647031064" duration="3794000" />
+      <workItem from="1662730669653" duration="2672000" />
     </task>
     <servers />
   </component>
