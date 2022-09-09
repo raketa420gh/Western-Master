@@ -4,30 +4,25 @@ using UnityEngine;
 
 public class Spot : MonoBehaviour
 {
-    public event Action OnVisited;
-    public event Action OnPassed;
+    public event Action<Spot> OnVisited;
+    public event Action<Spot> OnPassed;
 
     [SerializeField] private List<Enemy> _enemies = new List<Enemy>();
     private int _enemiesCount;
+    private int _number;
+    private bool _isLast;
 
-    private void OnEnable()
-    {
-        if (_enemies.Capacity > 0)
-        {
-            foreach (var enemy in _enemies)
-            {
-                enemy.OnDeath += OnEnemyDeath;
-                _enemiesCount++;
-            }
-        }
-        else
-            Debug.LogError("Enemies list is empty!");
-    }
+    public int Number => _number;
+    public bool IsLast => _isLast;
 
-    private void OnDisable()
+    private void OnEnable() => Initialize();
+
+    private void OnDisable() => Disable();
+
+    public void Setup(int number, bool isLast)
     {
-        foreach (var enemy in _enemies)
-            enemy.OnDeath -= OnEnemyDeath;
+        _number = number;
+        _isLast = isLast;
     }
 
     public void Visit()
@@ -38,12 +33,32 @@ public class Spot : MonoBehaviour
             enemy.SetAggroState();
         }
 
-        OnVisited?.Invoke();
+        OnVisited?.Invoke(this);
+    }
+
+    private void Initialize()
+    {
+        if (_enemies.Capacity > 0)
+        {
+            foreach (var enemy in _enemies)
+            {
+                enemy.OnDeath += OnEnemyDeath;
+                _enemiesCount++;
+            }
+        }
+        else
+            Debug.Log("Enemies list is empty!");
+    }
+
+    private void Disable()
+    {
+        foreach (var enemy in _enemies)
+            enemy.OnDeath -= OnEnemyDeath;
     }
 
     private void Pass()
     {
-        OnPassed?.Invoke();
+        OnPassed?.Invoke(this);
     }
 
     private void OnEnemyDeath(Character character)

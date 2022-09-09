@@ -14,10 +14,10 @@ public class PlayerDetector : MonoBehaviour
     private Vector3 _lookDirection;
 
     [Inject]
-    public void Construct(Player player) => _player = player;
-
-    private void Awake()
+    public void Construct(Player player)
     {
+        _player = player;
+        
         _transform = transform;
         _playerTransform = _player.CenterTransform;
     }

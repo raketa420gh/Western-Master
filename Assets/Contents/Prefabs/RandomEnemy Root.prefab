@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   _centerTransform: {fileID: 0}
 --- !u!114 &408018440766174180
 MonoBehaviour:

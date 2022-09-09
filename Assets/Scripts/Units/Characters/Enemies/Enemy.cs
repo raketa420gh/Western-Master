@@ -17,7 +17,7 @@ public class Enemy : Character
     private EnemyAggroState _aggroState;
 
     public PlayerDetector PlayerDetector => _playerDetector;
-    public PistolGun Gun => _gun;
+    public float AggroDuration => _data.AggroDuration;
 
     protected override void Awake()
     {
