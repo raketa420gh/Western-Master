@@ -2,43 +2,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
+[RequireComponent(typeof(UIManager))]
+
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<Spot> _spots = new List<Spot>();
     
     private Player _player;
     private CameraSwitcher _cameraSwitcher;
+    private UIManager _ui;
 
     [Inject]
     public void Construct(Player player, CameraSwitcher cameraSwitcher)
     {
         _player = player;
         _cameraSwitcher = cameraSwitcher;
+        
+        _ui = GetComponent<UIManager>();
     }
 
-    private void OnEnable() => Initialize();
+    private void OnEnable() => InitializeWay();
 
-    private void OnDisable() => Disable();
+    private void OnDisable() => DisableWay();
 
     private void Start()
     {
         _player.Setup();
-
-        _player.SplineFollower.followSpeed = 2f;
-        _player.SetRunningState();
-        
         _cameraSwitcher.SetPlayerFollowCamera();
+        
+        _ui.ToggleStartPanel(true);
     }
 
-    private void Initialize()
+    public void StartLevel()
+    {
+        _ui.ToggleStartPanel(false);
+        _ui.ToggleHUD(true);
+        
+        StartRunPlayer();
+    }
+
+    private void InitializeWay()
     {
         if (_spots.Capacity > 0)
-            InitializeWay();
+            InitializeSpots();
         else
             Debug.LogError("Spots list is empty!");
     }
 
-    private void InitializeWay()
+    private void InitializeSpots()
     {
         for (var i = 0; i < _spots.Count; i++)
         {
@@ -53,14 +64,20 @@ public class LevelManager : MonoBehaviour
         foreach (var spot in _spots)
             spot.OnPassed += OnSpotPassed;
     }
-    
-    private void Disable()
+
+    private void DisableWay()
     {
         foreach (var spot in _spots)
             spot.OnVisited -= OnSpotVisited;
 
         foreach (var spot in _spots)
             spot.OnPassed -= OnSpotPassed;
+    }
+
+    private void StartRunPlayer()
+    {
+        _player.SplineFollower.followSpeed = 3f;
+        _player.SetRunningState();
     }
 
     private void OnSpotVisited(Spot spot)
@@ -71,7 +88,9 @@ public class LevelManager : MonoBehaviour
         {
             _player.SetIdleState();
             _cameraSwitcher.SetFinishCamera();
-            //ui finish panel on
+            
+            _ui.ToggleHUD(false);
+            _ui.ToggleWinPanel(true);
         }
         else
         {
