@@ -1,6 +1,11 @@
+using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using Zenject;
+#pragma warning disable CS4014
 
 [RequireComponent(typeof(UIManager))]
 
@@ -80,6 +85,18 @@ public class LevelManager : MonoBehaviour
         _player.SetRunningState();
     }
 
+    private async Task PassSpotAfterDelay(float seconds, CancellationToken cancellationToken)
+    {
+        _player.SetIdleState();
+        
+        await Task.Delay(TimeSpan.FromSeconds(seconds), cancellationToken);
+        
+        _player.SplineFollower.followSpeed = 2f;
+        _player.SetRunningState();
+
+        _cameraSwitcher.SetPlayerFollowCamera();
+    }
+
     private void OnSpotVisited(Spot spot)
     {
         _player.SplineFollower.followSpeed = 0f;
@@ -102,9 +119,6 @@ public class LevelManager : MonoBehaviour
 
     private void OnSpotPassed(Spot spot)
     {
-        _player.SplineFollower.followSpeed = 2f;
-        _player.SetRunningState();
-
-        _cameraSwitcher.SetPlayerFollowCamera();
+        PassSpotAfterDelay(1f, new CancellationToken());
     }
 }

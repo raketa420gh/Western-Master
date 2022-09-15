@@ -6,8 +6,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/Level_1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAggroState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerAggroState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <workItem from="1662647031064" duration="3794000" />
       <workItem from="1662730669653" duration="6392000" />
       <workItem from="1662772724384" duration="184000" />
-      <workItem from="1663251214724" duration="5887000" />
+      <workItem from="1663251214724" duration="8397000" />
     </task>
     <servers />
   </component>

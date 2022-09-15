@@ -48,7 +48,7 @@ public class Spot : MonoBehaviour
                 _enemiesCount++;
             }
         }
-        else
+        else if (!_isLast)
             Debug.Log("Enemies list is empty!");
     }
 
