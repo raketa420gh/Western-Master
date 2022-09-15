@@ -8,12 +8,14 @@ public class Spot : MonoBehaviour
     public event Action<Spot> OnPassed;
 
     [SerializeField] private List<Enemy> _enemies = new List<Enemy>();
+
     private int _enemiesCount;
     private int _number;
     private bool _isLast;
 
     public int Number => _number;
     public bool IsLast => _isLast;
+    public Transform ObservationPoint => transform;
 
     private void OnEnable() => Initialize();
 

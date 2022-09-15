@@ -1,5 +1,7 @@
 using System;
+using Sirenix.Utilities;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class PlayerAggroState : PlayerState
 {
@@ -17,7 +19,8 @@ public class PlayerAggroState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        
+
+        _player.SplineFollower.enabled = false;
         _animation.PlayAim();
     }
 
@@ -37,16 +40,20 @@ public class PlayerAggroState : PlayerState
         {
             var aimingDirection = _aimingPoint - _player.Gun.Muzzle.position;
             _player.Gun.Shoot(aimingDirection);
+
+            //КОСТЫЛЬ. УБРАТЬ. СРОЧНО!
+            var lookPoint = Object.Instantiate(new GameObject(), hitInfo.point, Quaternion.identity);
+            //
             
-            //_player.transform.LookAt(hitInfo.point);
-            //_player.transform.Rotate(Vector3.up, 30);
+            _player.LookAtOnlyY(lookPoint.transform);
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        
+
+        _player.SplineFollower.enabled = true;
         _animation.StopAim();
     }
 }
