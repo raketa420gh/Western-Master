@@ -7,7 +7,7 @@ using UnityEngine;
 using Zenject;
 #pragma warning disable CS4014
 
-[RequireComponent(typeof(UIManager))]
+[RequireComponent(typeof(LevelUIManager))]
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     
     private Player _player;
     private CameraSwitcher _cameraSwitcher;
-    private UIManager _ui;
+    private LevelUIManager levelUI;
 
     [Inject]
     public void Construct(Player player, CameraSwitcher cameraSwitcher)
@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
         _player = player;
         _cameraSwitcher = cameraSwitcher;
         
-        _ui = GetComponent<UIManager>();
+        levelUI = GetComponent<LevelUIManager>();
     }
 
     private void OnEnable() => InitializeWay();
@@ -35,13 +35,13 @@ public class LevelManager : MonoBehaviour
         _player.Setup();
         _cameraSwitcher.SetPlayerFollowCamera();
         
-        _ui.ToggleStartPanel(true);
+        levelUI.ToggleStartPanel(true);
     }
 
     public void StartLevel()
     {
-        _ui.ToggleStartPanel(false);
-        _ui.ToggleHUD(true);
+        levelUI.ToggleStartPanel(false);
+        levelUI.ToggleHUD(true);
         
         StartRunPlayer();
     }
@@ -106,8 +106,8 @@ public class LevelManager : MonoBehaviour
             _player.SetIdleState();
             _cameraSwitcher.SetFinishCamera();
             
-            _ui.ToggleHUD(false);
-            _ui.ToggleWinPanel(true);
+            levelUI.ToggleHUD(false);
+            levelUI.ToggleWinPanel(true);
         }
         else
         {

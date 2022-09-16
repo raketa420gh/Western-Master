@@ -8,6 +8,12 @@ public class SceneLoader
 
     public void RestartScene() =>
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    
+    public void LoadScene(string name) =>
+        SceneManager.LoadScene(name);
+
+    public void LoadScene(int index) => 
+        SceneManager.LoadScene(index);
 
     public void LoadNextScene()
     {
@@ -22,7 +28,4 @@ public class SceneLoader
             SceneManager.LoadScene(0);
         }
     }
-
-    private void LoadScene(string name) =>
-        SceneManager.LoadScene(name);
 }

@@ -9,6 +9,7 @@ public class SceneLoaderInstaller : MonoInstaller
     {
         Container
             .Bind<SceneLoader>()
-            .AsSingle();
+            .AsSingle()
+            .NonLazy();
     }
 }
