@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class LevelUIManager : MonoBehaviour
 {
     [SerializeField] private UIPanel _startPanel;
     [SerializeField] private UIPanel _winPanel;
