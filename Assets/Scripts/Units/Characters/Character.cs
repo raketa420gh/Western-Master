@@ -32,6 +32,11 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void OnDisable() => _health.OnOver -= OnHealthOver;
 
+    public void LookAtOnlyY(Transform target) => transform.LookAt(new Vector3(
+        target.position.x, 
+        transform.position.y, 
+        target.position.z));
+
     protected virtual void Setup(CharacterData data)
     {
         _movement.Setup(data);
