@@ -16,22 +16,23 @@ public class EnemyAggroState : EnemyState
         base.Enter();
 
         var playerPosition = _enemy.PlayerDetector.GetPlayerPosition();
+        var playerTransform = _enemy.PlayerDetector.GetTransform();
 
         switch (_aggroType)
         {
             case EnemyAggroType.Simply:
             {
-                _enemy.transform.LookAt(playerPosition);
+                _enemy.LookAtOnlyY(playerTransform);
                 _animation.PlayAim();
-                _enemy.ShootForwardWithDelay(_enemy.AggroDuration);
+                _enemy.ShootToPlayerAfterDelay(_enemy.AggroDuration);
                 break;
             }
             case EnemyAggroType.WithMoving:
             {
                 //MoveTo
-                _enemy.transform.LookAt(playerPosition);
+                _enemy.LookAtOnlyY(playerTransform);
                 _animation.PlayAim();
-                _enemy.ShootForwardWithDelay(_enemy.AggroDuration);
+                _enemy.ShootToPlayerAfterDelay(_enemy.AggroDuration);
                 break;
             }
         }

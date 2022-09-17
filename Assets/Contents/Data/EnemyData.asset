@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cae524feeb400dbd64d60bdc8c279e, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  Speed: 10
-  AggroDuration: 1
-  MaxHealth: 1
-  ViewRadius: 50
+  _moveSpeed: 0.5
+  _aggroDuration: 2
+  _maxHealth: 1
+  _viewRadius: 100
+  _aggroType: 1
