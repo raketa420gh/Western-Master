@@ -45,7 +45,12 @@ public class Enemy : Character
 
     public void SetAggroState() => _stateMachine.ChangeState(_aggroState);
 
-    public void ShootForwardWithDelay(float delay) => Invoke(nameof(ShootForward), delay);
+    public void ShootToPlayerAfterDelay(float delay) => Invoke(nameof(ShootToPlayer), delay);
+    
+    public void LookAtOnlyY(Transform target) => transform.LookAt(new Vector3(
+        target.position.x, 
+        transform.position.y, 
+        target.position.z));
 
     protected override void Setup(CharacterData data)
     {
@@ -69,7 +74,14 @@ public class Enemy : Character
         SetIdleState();
     }
 
-    private void Shoot(Vector3 direction) => _gun.Shoot(direction);
+    private void Shoot(Vector3 direction) => _gun.Shoot(direction.normalized);
 
-    private void ShootForward() => Shoot(Vector3.forward);
+    private void ShootToPlayer()
+    {
+        if (!IsAlive) 
+            return;
+        
+        var directionToPlayer = _playerDetector.GetPlayerPosition() - _centerTransform.position; 
+        Shoot(directionToPlayer);
+    }
 }

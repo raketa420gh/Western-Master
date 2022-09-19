@@ -21,6 +21,7 @@ public abstract class Character : MonoBehaviour
     private IHealth _health;
     
     public Transform CenterTransform => _centerTransform;
+    public bool IsAlive => _health.Current > 0;
 
     protected virtual void Awake()
     {

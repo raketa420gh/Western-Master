@@ -2,56 +2,60 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using UnityEditor;
 using UnityEngine;
 using Zenject;
-#pragma warning disable CS4014
 
 [RequireComponent(typeof(LevelUIManager))]
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<Spot> _spots = new List<Spot>();
-    
+
+    private SceneLoader _sceneLoader;
     private Player _player;
     private CameraSwitcher _cameraSwitcher;
-    private LevelUIManager levelUI;
+    private LevelUIManager _ui;
 
     [Inject]
-    public void Construct(Player player, CameraSwitcher cameraSwitcher)
+    public void Construct(SceneLoader sceneLoader, Player player, CameraSwitcher cameraSwitcher)
     {
+        _sceneLoader = sceneLoader;
         _player = player;
         _cameraSwitcher = cameraSwitcher;
         
-        levelUI = GetComponent<LevelUIManager>();
+        _ui = GetComponent<LevelUIManager>();
     }
 
-    private void OnEnable() => InitializeWay();
+    private void OnEnable() => Initialize();
 
-    private void OnDisable() => DisableWay();
+    private void OnDisable() => Deinitialize();
 
     private void Start()
     {
         _player.Setup();
         _cameraSwitcher.SetPlayerFollowCamera();
         
-        levelUI.ToggleStartPanel(true);
+        _ui.ToggleStartPanel(true);
     }
 
     public void StartLevel()
     {
-        levelUI.ToggleStartPanel(false);
-        levelUI.ToggleHUD(true);
+        _ui.ToggleStartPanel(false);
+        _ui.ToggleHUD(true);
         
         StartRunPlayer();
     }
 
-    private void InitializeWay()
+    public void Restart() => _sceneLoader.RestartScene();
+
+    private void Initialize()
     {
         if (_spots.Capacity > 0)
             InitializeSpots();
         else
             Debug.LogError("Spots list is empty!");
+
+        _player.OnDeath += OnPlayerDeath;
     }
 
     private void InitializeSpots()
@@ -70,7 +74,7 @@ public class LevelManager : MonoBehaviour
             spot.OnPassed += OnSpotPassed;
     }
 
-    private void DisableWay()
+    private void Deinitialize()
     {
         foreach (var spot in _spots)
             spot.OnVisited -= OnSpotVisited;
@@ -97,6 +101,12 @@ public class LevelManager : MonoBehaviour
         _cameraSwitcher.SetPlayerFollowCamera();
     }
 
+    private void LoseLevel()
+    {
+        _cameraSwitcher.SetLoseCamera();
+        _ui.ToggleWinPanel(true);
+    }
+
     private void OnSpotVisited(Spot spot)
     {
         _player.SplineFollower.followSpeed = 0f;
@@ -106,8 +116,8 @@ public class LevelManager : MonoBehaviour
             _player.SetIdleState();
             _cameraSwitcher.SetFinishCamera();
             
-            levelUI.ToggleHUD(false);
-            levelUI.ToggleWinPanel(true);
+            _ui.ToggleHUD(false);
+            _ui.ToggleWinPanel(true);
         }
         else
         {
@@ -120,5 +130,10 @@ public class LevelManager : MonoBehaviour
     private void OnSpotPassed(Spot spot)
     {
         PassSpotAfterDelay(1f, new CancellationToken());
+    }
+
+    private void OnPlayerDeath(Character character)
+    {
+        LoseLevel();
     }
 }

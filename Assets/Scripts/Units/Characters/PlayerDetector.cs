@@ -36,4 +36,6 @@ public class PlayerDetector : MonoBehaviour
     }
 
     public Vector3 GetPlayerPosition() => _player.GetPosition;
+
+    public Transform GetTransform() => _player.transform;
 }

@@ -11,4 +11,6 @@ public class CameraSwitcher : MonoBehaviour
     public void SetSpotCamera(int spotNumber) => _animator.Play(AnimationCameraStateNames.Spot + $"{spotNumber}");
 
     public void SetFinishCamera() => _animator.Play(AnimationCameraStateNames.Finish);
+
+    public void SetLoseCamera() => _animator.Play(AnimationCameraStateNames.Lose);
 }
