@@ -14,8 +14,7 @@ public class EnemyAggroState : EnemyState
     public override void Enter()
     {
         base.Enter();
-
-        var playerPosition = _enemy.PlayerDetector.GetPlayerPosition();
+        
         var playerTransform = _enemy.PlayerDetector.GetTransform();
 
         switch (_aggroType)
@@ -29,7 +28,7 @@ public class EnemyAggroState : EnemyState
             }
             case EnemyAggroType.WithMoving:
             {
-                //MoveTo
+                //MoveToPoint
                 _enemy.LookAtOnlyY(playerTransform);
                 _animation.PlayAim();
                 _enemy.ShootToPlayerAfterDelay(_enemy.AggroDuration);

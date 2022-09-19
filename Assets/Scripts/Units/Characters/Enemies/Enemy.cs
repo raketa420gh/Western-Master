@@ -78,6 +78,9 @@ public class Enemy : Character
 
     private void ShootToPlayer()
     {
+        if (!IsAlive) 
+            return;
+        
         var directionToPlayer = _playerDetector.GetPlayerPosition() - _centerTransform.position; 
         Shoot(directionToPlayer);
     }
