@@ -14,11 +14,10 @@ public abstract class Character : MonoBehaviour
     public event Action<Character> OnDeath;
     
     [BoxGroup("Transform"), SerializeField] protected Transform _centerTransform;
-    [BoxGroup("Components"), SerializeField] private CharacterMovement _movement;
-    [BoxGroup("Components"), SerializeField] private HumanoidRagdoll _ragdoll;
-    
-    protected ICharacterAnimation _animation;
-    private IHealth _health;
+    [BoxGroup("Components"), SerializeField] protected CharacterMovement _movement;
+    [BoxGroup("Components"), SerializeField] protected HumanoidRagdoll _ragdoll;
+    [BoxGroup("Components"), SerializeField] protected ICharacterAnimation _animation;
+    [BoxGroup("Components"), SerializeField] protected IHealth _health;
     
     public Transform CenterTransform => _centerTransform;
     public bool IsAlive => _health.Current > 0;
