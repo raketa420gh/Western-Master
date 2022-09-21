@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/WayInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/WayInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Data/PlayerData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/BaseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/BaseScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/BaseScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/BaseScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/Levels/Level_1.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/Levels/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/Levels/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AstarPathfindingProject/Core/AstarPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/AstarPathfindingProject/Core/AstarPath.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/Node.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/Node.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineComputer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineComputer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineMorph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineMorph.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Level.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/Level.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Contents/Scenes/Levels/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Scenes/Levels/Level_2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +147,7 @@
       <workItem from="1663708949198" duration="2514000" />
       <workItem from="1663713632384" duration="265000" />
       <workItem from="1663714325053" duration="293000" />
-      <workItem from="1663720889014" duration="1981000" />
+      <workItem from="1663720889014" duration="2819000" />
     </task>
     <servers />
   </component>
