@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Dreamteck.Splines;
 using UnityEngine;
 using Zenject;
 
@@ -12,14 +13,16 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<Spot> _spots = new List<Spot>();
 
     private SceneLoader _sceneLoader;
+    private SplineComputer _splineComputer;
     private Player _player;
     private CameraSwitcher _cameraSwitcher;
     private LevelUIManager _ui;
 
     [Inject]
-    public void Construct(SceneLoader sceneLoader, Player player, CameraSwitcher cameraSwitcher)
+    public void Construct(SceneLoader sceneLoader, SplineComputer splineComputer, Player player, CameraSwitcher cameraSwitcher)
     {
         _sceneLoader = sceneLoader;
+        _splineComputer = splineComputer;
         _player = player;
         _cameraSwitcher = cameraSwitcher;
         
@@ -48,8 +51,12 @@ public class LevelManager : MonoBehaviour
 
     public void Restart() => _sceneLoader.RestartScene();
 
+    public void StartNextLevel() => _sceneLoader.LoadNextScene();
+
     private void Initialize()
     {
+        _splineComputer.Rebuild();
+        
         if (_spots.Capacity > 0)
             InitializeSpots();
         else
