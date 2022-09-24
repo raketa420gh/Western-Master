@@ -10,4 +10,6 @@ public class HumanoidRagdoll : MonoBehaviour
         _puppetMaster.Teleport(position, rotation, moveToTarget);
 
     public void Kill() => _puppetMaster.Kill();
+    
+    public void Rebuild() => _puppetMaster.Rebuild();
 }

@@ -5,7 +5,7 @@ public class PistolGun : MonoBehaviour, IFirearms
     [SerializeField] private ProjectileBase _bullet;
     [SerializeField] private Transform _muzzle;
 
-    public Transform Muzzle => _muzzle;
+    public Vector3 MuzzlePosition => _muzzle.transform.position;
 
     private int _magazineCapacity = 1;
     private int _currentBullets = 1;
@@ -27,7 +27,7 @@ public class PistolGun : MonoBehaviour, IFirearms
             return;
         }
         
-        var bullet = Instantiate(_bullet, _muzzle.position, Quaternion.identity);
+        var bullet = Instantiate(_bullet, MuzzlePosition, Quaternion.identity);
         bullet.SetDirection(direction);
 
         _currentBullets--;

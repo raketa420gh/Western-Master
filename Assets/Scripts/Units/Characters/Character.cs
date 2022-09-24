@@ -16,8 +16,8 @@ public abstract class Character : MonoBehaviour
     [BoxGroup("Transform"), SerializeField] protected Transform _centerTransform;
     [BoxGroup("Components"), SerializeField] protected CharacterMovement _movement;
     [BoxGroup("Components"), SerializeField] protected HumanoidRagdoll _ragdoll;
-    [BoxGroup("Components"), SerializeField] protected ICharacterAnimation _animation;
-    [BoxGroup("Components"), SerializeField] protected IHealth _health;
+    [BoxGroup("Components")] protected ICharacterAnimation _animation;
+    [BoxGroup("Components")] protected IHealth _health;
     
     public Transform CenterTransform => _centerTransform;
     public bool IsAlive => _health.Current > 0;
@@ -41,6 +41,8 @@ public abstract class Character : MonoBehaviour
     {
         _movement.Setup(data);
         _health.Setup(data);
+        
+        _ragdoll.Rebuild();
     }
 
     protected virtual void HandleDeath()
