@@ -6,4 +6,5 @@ public interface ICharacterAnimation
     void StopAim();
     void PlayRun();
     void StopRun();
+    void PlayDance();
 }

@@ -12,7 +12,8 @@ public class Player : Character
     private PlayerIdleState _idleState;
     private PlayerAggroState _aggroState;
     private PlayerRunningState _runningState;
-    
+    private PlayerVictoryState _victoryState;
+
     public PistolGun Gun => _gun;
     public SplineFollower SplineFollower => _splineFollower;
     public Vector3 GetPosition => _centerTransform.position;
@@ -39,6 +40,8 @@ public class Player : Character
     public void SetAggroState() => _stateMachine.ChangeState(_aggroState);
 
     public void SetRunningState() => _stateMachine.ChangeState(_runningState);
+    
+    public void SetVictoryState() => _stateMachine.ChangeState(_victoryState);
 
     public void Setup()
     {
@@ -56,6 +59,7 @@ public class Player : Character
         _idleState = new PlayerIdleState(this, _animation);
         _aggroState = new PlayerAggroState(this, _animation);
         _runningState = new PlayerRunningState(this, _animation);
+        _victoryState = new PlayerVictoryState(this, _animation);
         
         SetIdleState();
     }
