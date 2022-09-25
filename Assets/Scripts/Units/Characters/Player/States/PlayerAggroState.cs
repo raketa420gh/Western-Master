@@ -38,7 +38,7 @@ public class PlayerAggroState : PlayerState
 
         if (Input.GetMouseButtonDown(0))
         {
-            var aimingDirection = _aimingPoint - _player.Gun.Muzzle.position;
+            var aimingDirection = _aimingPoint - _player.Gun.MuzzlePosition;
             _player.Gun.Shoot(aimingDirection);
 
             //КОСТЫЛЬ. УБРАТЬ. СРОЧНО!
