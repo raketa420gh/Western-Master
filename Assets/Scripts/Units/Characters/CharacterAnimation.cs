@@ -17,4 +17,6 @@ public class CharacterAnimation : MonoBehaviour, ICharacterAnimation
     public void PlayRun() => _animator.SetBool(AnimationParameterNames.Run, true);
 
     public void StopRun() => _animator.SetBool(AnimationParameterNames.Run, false);
+
+    public void PlayDance() => _animator.SetTrigger(AnimationParameterNames.Dance);
 }

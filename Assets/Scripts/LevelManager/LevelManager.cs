@@ -120,7 +120,7 @@ public class LevelManager : MonoBehaviour
 
         if (spot.IsLast)
         {
-            _player.SetIdleState();
+            _player.SetVictoryState();
             _cameraSwitcher.SetFinishCamera();
             
             _ui.ToggleHUD(false);
