@@ -957,6 +957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403080951}
+  - component: {fileID: 403080952}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -979,6 +980,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403080952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403080950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af00263e1dbea034f8056b31974fffa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainMenuPanel: {fileID: 7923886735131874503}
+  _selectLevelPanel: {fileID: 7923886734567408089}
+  _allLevelButtons: []
 --- !u!1 &407609640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1270,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 250
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1279,8 +1295,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953820938}
-  m_LocalRotation: {x: 0.3673848, y: -0.000000015878708, z: 0.000000006272218, w: 0.930069}
-  m_LocalPosition: {x: 0, y: 3, z: -3}
+  m_LocalRotation: {x: 0.0059662643, y: 0.00000001512669, z: -9.025144e-11, w: 0.99998224}
+  m_LocalPosition: {x: 0, y: 1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1714,26 +1730,26 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 1370972985}
   _result:
-    position: {x: 0, y: 3, z: -3}
+    position: {x: 0, y: 1, z: -5}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: -1, y: 0, z: 0}
+    forward: {x: 1, y: 0, z: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0
+    percent: 0.5
   _finalResult:
-    position: {x: 0, y: 3, z: -3}
+    position: {x: 0, y: 1, z: -5}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: -1, y: 0, z: 0}
+    forward: {x: 1, y: 0, z: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0
+    percent: 0.5
   wrapMode: 2
   followMode: 0
   autoStartPosition: 0
   follow: 1
   _followSpeed: 0.25
   _followDuration: 1
-  _startPosition: 0
+  _startPosition: 0.5
   editorSetPosition: 1
 --- !u!4 &1370972985
 Transform:
@@ -1742,8 +1758,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370972983}
-  m_LocalRotation: {x: 0.3673848, y: -0.000000015878708, z: 0.000000006272218, w: 0.930069}
-  m_LocalPosition: {x: 0, y: 3, z: -3}
+  m_LocalRotation: {x: 0.0059662643, y: 0.00000001512669, z: -9.025144e-11, w: 0.99998224}
+  m_LocalPosition: {x: 0, y: 1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1772,7 +1788,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 4879780444491193384}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.05
     FarClipPlane: 250
@@ -8809,14 +8825,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowSelectLevelPanel
-        m_Mode: 1
+      - m_Target: {fileID: 403080952}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
