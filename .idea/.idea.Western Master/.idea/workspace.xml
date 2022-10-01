@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,7 @@
       <workItem from="1664203804268" duration="3000" />
       <workItem from="1664203836012" duration="1000" />
       <workItem from="1664203883535" duration="210000" />
-      <workItem from="1664627707380" duration="2961000" />
+      <workItem from="1664627707380" duration="3641000" />
     </task>
     <servers />
   </component>
