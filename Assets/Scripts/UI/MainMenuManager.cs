@@ -2,11 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class MainMenuUIManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private UIPanel _mainMenuPanel;
     [SerializeField] private UIPanel _selectLevelPanel;
-    [SerializeField] private UIPanel _settingsPanel;
     [SerializeField] private List<UILevelButton> _allLevelButtons = new List<UILevelButton>();
 
     private List<UIPanel> _allPanels = new List<UIPanel>();
@@ -18,29 +17,11 @@ public class MainMenuUIManager : MonoBehaviour
 
     private void Start()
     {
-        for (var i = 0; i < _allPanels.Count; i++)
-        {
-            if (_allPanels[i] != null)
-                _allPanels.Add(_allPanels[i]);
-        }
-        
-        for (var i = 0; i < _allLevelButtons.Count; i++)
-        {
-            if (_allLevelButtons[i] != null)
-                _allLevelButtons.Add(_allLevelButtons[i]);
-        }
+        InitializePanelsLists();
 
         ShowMainMenuPanel();
         
-        UpdateLevelsView();
-    }
-
-    private void UpdateLevelsView()
-    {
-        foreach (var level in _allLevelButtons)
-            level.ToggleUnlock(false);
-
-        _allLevelButtons[0].ToggleUnlock(true);
+        //UpdateLevelsView();
     }
 
     public void ShowMainMenuPanel()
@@ -60,4 +41,27 @@ public class MainMenuUIManager : MonoBehaviour
     }
 
     public void LoadLevel(int levelNumber) => _sceneLoader.LoadScene(LevelNames.Level + levelNumber);
+
+    private void InitializePanelsLists()
+    {
+        for (var i = 0; i < _allPanels.Count; i++)
+        {
+            if (_allPanels[i] != null)
+                _allPanels.Add(_allPanels[i]);
+        }
+
+        for (var i = 0; i < _allLevelButtons.Count; i++)
+        {
+            if (_allLevelButtons[i] != null)
+                _allLevelButtons.Add(_allLevelButtons[i]);
+        }
+    }
+
+    /*private void UpdateLevelsView()
+    {
+        foreach (var level in _allLevelButtons)
+            level.ToggleUnlock(false);
+
+        _allLevelButtons[0].ToggleUnlock(true);
+    }*/
 }

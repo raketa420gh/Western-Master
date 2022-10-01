@@ -9,6 +9,7 @@ public class PlayerAggroState : PlayerState
     private ICharacterAnimation _animation;
     private Camera _camera = Camera.main;
     private Vector3 _aimingPoint;
+    private GameObject _pointer;
 
     public PlayerAggroState(Player player, ICharacterAnimation animation) : base(player)
     {
@@ -40,12 +41,13 @@ public class PlayerAggroState : PlayerState
         {
             var aimingDirection = _aimingPoint - _player.Gun.MuzzlePosition;
             _player.Gun.Shoot(aimingDirection);
-
-            //КОСТЫЛЬ. УБРАТЬ. СРОЧНО!
-            var lookPoint = Object.Instantiate(new GameObject(), hitInfo.point, Quaternion.identity);
-            //
             
-            _player.LookAtOnlyY(lookPoint.transform);
+            if (!_pointer)
+                _pointer = Object.Instantiate(new GameObject(), hitInfo.point, Quaternion.identity);
+            else
+                _pointer.transform.position = hitInfo.point;
+
+            _player.LookAtSmoothOnlyY(_pointer.transform, 0.25f);
         }
     }
 

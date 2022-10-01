@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc07daf-c56d-4ae0-ba4e-c2013198f35e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerVictoryState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/States/PlayerVictoryState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Western Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Contents/Prefabs/Sheriff Root.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationParameterNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/AnimationParameterNames.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/ICharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/ICharacterAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Characters/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants/AnimationCameraStateNames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager/Spot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILevelButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Characters/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Characters/CharacterAnimation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -162,6 +154,12 @@
       <workItem from="1664028673246" duration="914000" />
       <workItem from="1664031259409" duration="6009000" />
       <workItem from="1664049218690" duration="3000" />
+      <workItem from="1664133196384" duration="341000" />
+      <workItem from="1664201821854" duration="1019000" />
+      <workItem from="1664203804268" duration="3000" />
+      <workItem from="1664203836012" duration="1000" />
+      <workItem from="1664203883535" duration="210000" />
+      <workItem from="1664627707380" duration="2961000" />
     </task>
     <servers />
   </component>
