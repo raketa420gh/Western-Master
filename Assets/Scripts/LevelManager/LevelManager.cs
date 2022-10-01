@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             _player.SetAggroState();
-            _player.LookAtOnlyY(spot.ObservationPoint);
+            _player.LookAtSmoothOnlyY(spot.ObservationPoint);
             _cameraSwitcher.SetSpotCamera(spot.Number);
         }
     }
