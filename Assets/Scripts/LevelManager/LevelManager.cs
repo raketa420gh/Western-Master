@@ -6,7 +6,7 @@ using Dreamteck.Splines;
 using UnityEngine;
 using Zenject;
 
-[RequireComponent(typeof(LevelUIManager))]
+[RequireComponent(typeof(UIController))]
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private SplineComputer _splineComputer;
     private Player _player;
     private CameraSwitcher _cameraSwitcher;
-    private LevelUIManager _ui;
+    private UIController _ui;
 
     [Inject]
     public void Construct(SceneLoader sceneLoader, SplineComputer splineComputer, Player player, CameraSwitcher cameraSwitcher)
@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
         _player = player;
         _cameraSwitcher = cameraSwitcher;
         
-        _ui = GetComponent<LevelUIManager>();
+        _ui = GetComponent<UIController>();
     }
 
     private void OnEnable() => Initialize();

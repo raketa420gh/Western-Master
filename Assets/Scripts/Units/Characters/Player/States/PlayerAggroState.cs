@@ -39,8 +39,8 @@ public class PlayerAggroState : PlayerState
 
         if (Input.GetMouseButtonDown(0))
         {
-            var aimingDirection = _aimingPoint - _player.Gun.MuzzlePosition;
-            _player.Gun.Shoot(aimingDirection);
+            var aimingDirection = _aimingPoint - _player.Weapon.MuzzlePosition;
+            _player.Weapon.Shoot(aimingDirection);
             
             if (!_pointer)
                 _pointer = Object.Instantiate(new GameObject(), hitInfo.point, Quaternion.identity);

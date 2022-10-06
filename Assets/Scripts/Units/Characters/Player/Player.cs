@@ -6,7 +6,7 @@ public class Player : Character
 {
     [BoxGroup("Components"), SerializeField] private SplineFollower _splineFollower;
     [BoxGroup("Data"), SerializeField] private PlayerData _data;
-    [BoxGroup("Weapon"), SerializeField] private PistolGun _gun;
+    [BoxGroup("Weapon"), SerializeField] private PistolGun _weapon;
 
     private StateMachine _stateMachine;
     private PlayerIdleState _idleState;
@@ -14,7 +14,7 @@ public class Player : Character
     private PlayerRunningState _runningState;
     private PlayerVictoryState _victoryState;
 
-    public PistolGun Gun => _gun;
+    public PistolGun Weapon => _weapon;
     public SplineFollower SplineFollower => _splineFollower;
     public Vector3 GetPosition => _centerTransform.position;
 
@@ -49,7 +49,7 @@ public class Player : Character
         
         InitializeStateMachine();
         
-        _gun.Setup(100);
+        _weapon.Setup(100);
     }
 
     private void InitializeStateMachine()
