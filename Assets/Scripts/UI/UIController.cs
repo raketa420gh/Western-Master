@@ -1,6 +1,8 @@
+using System;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 public class UIController : MonoBehaviour
@@ -8,7 +10,8 @@ public class UIController : MonoBehaviour
     [BoxGroup("Panels"), SerializeField] private UIPanel _startPanel;
     [BoxGroup("Panels"), SerializeField] private UIPanel _winPanel;
     [BoxGroup("Panels"), SerializeField] private UIPanel _hud;
-    [BoxGroup("Weapon UI"), SerializeField] private TMP_Text _bulletsCountText;
+    [BoxGroup("Weapon"), SerializeField] private TMP_Text _bulletsCountText;
+    [BoxGroup("LevelProgress"), SerializeField] private Image _levelProgressImage;
     
     private Player _player;
 
@@ -18,6 +21,11 @@ public class UIController : MonoBehaviour
     private void OnEnable()
     {
         _player.Weapon.OnBulletCountChanged += OnPlayerWeaponBulletCountChanged;
+    }
+
+    private void Update()
+    {
+        _levelProgressImage.fillAmount = (float) _player.SplineFollower.result.percent;
     }
 
     private void OnDisable()
