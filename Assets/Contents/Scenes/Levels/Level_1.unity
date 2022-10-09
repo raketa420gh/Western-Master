@@ -877,10 +877,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1407638697}
     m_Modifications:
+    - target: {fileID: 1014974745688325036, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049965810648529225, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072651020553394042, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987627715811305267, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987627716112669578, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2987627716112669580, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 713091812}
+    - target: {fileID: 2987627716444706470, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2987627717384077032, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -970,12 +994,40 @@ PrefabInstance:
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 2987627717384077033, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987627717384077033, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469747650847823332, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5288926546299903305, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 114.47583
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440133985476922622, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967991379712248309, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452956122719063066, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070435281268158753, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156219595989835083, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17b5ad2acba5eb4985570d20a4a5f3e, type: 3}
@@ -2111,7 +2163,7 @@ GameObject:
   - component: {fileID: 273326149}
   - component: {fileID: 273326148}
   - component: {fileID: 273326147}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2375,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289926546}
-  m_LocalRotation: {x: -0.04880994, y: 0.9511889, z: -0.2147097, w: -0.21623373}
+  m_LocalRotation: {x: -0.048809934, y: 0.9511889, z: -0.21470971, w: -0.21623369}
   m_LocalPosition: {x: -5.28, y: 4.7, z: -57.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4859,7 +4911,7 @@ GameObject:
   - component: {fileID: 939626788}
   - component: {fileID: 939626790}
   - component: {fileID: 939626789}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8892,7 +8944,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058346761}
-  m_LocalRotation: {x: 0.26755983, y: 0.045480605, z: -0.012644414, w: 0.9623842}
+  m_LocalRotation: {x: 0.26755983, y: 0.04548056, z: -0.012644401, w: 0.9623842}
   m_LocalPosition: {x: -7.77, y: 4.37, z: -78.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10148,7 +10200,7 @@ GameObject:
   - component: {fileID: 1286070738}
   - component: {fileID: 1286070737}
   - component: {fileID: 1286070739}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StartPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10428,7 +10480,7 @@ GameObject:
   - component: {fileID: 1331241409}
   - component: {fileID: 1331241408}
   - component: {fileID: 1331241410}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FinishPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10563,7 +10615,7 @@ GameObject:
   - component: {fileID: 1373947755}
   - component: {fileID: 1373947754}
   - component: {fileID: 1373947753}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FinishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10936,8 +10988,8 @@ GameObject:
   - component: {fileID: 1407638700}
   - component: {fileID: 1407638699}
   - component: {fileID: 1407638698}
-  m_Layer: 0
-  m_Name: Canvas
+  m_Layer: 5
+  m_Name: GameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11827,7 +11879,7 @@ GameObject:
   - component: {fileID: 1594817960}
   - component: {fileID: 1594817962}
   - component: {fileID: 1594817961}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
