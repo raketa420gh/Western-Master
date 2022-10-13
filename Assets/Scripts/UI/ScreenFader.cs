@@ -15,6 +15,9 @@ public class ScreenFader : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    private void Start() => 
+        DontDestroyOnLoad(gameObject);
+
     public void FadeIn(Action fadedInCallback)
     {
         if (IsFading)
